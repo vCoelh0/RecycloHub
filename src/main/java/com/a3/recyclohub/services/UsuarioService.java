@@ -25,7 +25,7 @@ public class UsuarioService {
 		usuario.setSenha(dto.getSenha());
 		usuario.setPerfil(perfilUsuario.USUARIO);
 		
-		repository.save(usuario);
+		usuario = repository.save(usuario);
 		return new UsuarioDTO(usuario);
 		
 		

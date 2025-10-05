@@ -23,6 +23,9 @@ public class UsuarioDTO {
 	
 	// =============  CONSTRUTTORES, GETTERS E SETTERS =============
 
+	public UsuarioDTO() {
+		
+	}
 	
 	public UsuarioDTO(Long id, String nome, String sobrenome, String email, LocalDate dataNascimento, String senha) {
 		this.id = id;

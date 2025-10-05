@@ -2,6 +2,7 @@ package com.a3.recyclohub.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class UsuarioController {
 	private UsuarioService service;
 	
 	@PostMapping
-	public UsuarioDTO cadastrar(UsuarioDTO dto) {
+	public UsuarioDTO cadastrar(@RequestBody UsuarioDTO dto) {
 		return service.cadastrar(dto);
 	}
 	
