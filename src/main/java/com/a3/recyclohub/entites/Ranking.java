@@ -25,10 +25,21 @@ public class Ranking {
 	}
 
 
-	public Ranking(Long idUsuario, int pontuacao, int posicao) {
+	public Ranking(Long id, Long idUsuario, int pontuacao, int posicao) {
+		this.id = id;
 		this.idUsuario = idUsuario;
 		this.pontuacao = pontuacao;
 		this.posicao = posicao;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 
@@ -60,6 +71,10 @@ public class Ranking {
 	public void setPosicao(int posicao) {
 		this.posicao = posicao;
 	}
+
+	
+	
+
 	
 	
 	
