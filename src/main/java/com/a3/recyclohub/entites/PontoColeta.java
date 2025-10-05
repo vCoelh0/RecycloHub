@@ -12,7 +12,7 @@ public class PontoColeta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	private Long id;
 	
 	private String nome;
 	private String endereco;
@@ -24,18 +24,18 @@ public class PontoColeta {
 		
 	}
 
-	public PontoColeta(String id, String nome, String endereco, String tipoResiduo) {
+	public PontoColeta(Long id, String nome, String endereco, String tipoResiduo) {
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;
 		this.tipoResiduo = tipoResiduo;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
