@@ -12,6 +12,10 @@ public class PontoColetaDTO {
 	
 	// =============  CONSTRUTTORES, GETTERS E SETTERS =============
 	
+	public PontoColetaDTO() {
+		
+	}
+	
 	public PontoColetaDTO(Long id, String nome, String endereco, String tipoResiduo) {
 		this.id = id;
 		this.nome = nome;
