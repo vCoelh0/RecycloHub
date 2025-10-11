@@ -27,4 +27,8 @@ public class PontoColetaService {
 				
 	}
 	
+	public void deletar(Long id) {
+		repository.deleteById(id);
+	}
+	
 }
