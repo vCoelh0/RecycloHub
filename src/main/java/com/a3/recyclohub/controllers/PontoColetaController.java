@@ -1,7 +1,10 @@
 package com.a3.recyclohub.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +29,11 @@ public class PontoColetaController {
 	@DeleteMapping("/{id}")
 	public void deletar(@PathVariable Long id) {
 		service.deletar(id);
+	}
+	
+	@GetMapping
+	public List<PontoColetaDTO> listar(){
+		return service.listar();
 	}
 	
 	

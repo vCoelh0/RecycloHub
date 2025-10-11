@@ -1,5 +1,7 @@
 package com.a3.recyclohub.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,12 @@ public class PontoColetaService {
 	
 	public void deletar(Long id) {
 		repository.deleteById(id);
+	}
+	
+	
+	public List<PontoColetaDTO> listar(){
+		List<PontoColeta> result = repository.findAll();
+		return result.stream().map(PontoColetaDTO::new).toList();
 	}
 	
 }
