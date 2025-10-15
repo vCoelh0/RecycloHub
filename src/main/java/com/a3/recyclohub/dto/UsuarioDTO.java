@@ -4,13 +4,8 @@ import java.time.LocalDate;
 
 import com.a3.recyclohub.entites.Usuario;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 public class UsuarioDTO {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private Long id;
 	
 	private String nome;
