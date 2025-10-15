@@ -41,6 +41,10 @@ public class DescarteService {
 		
 		descarte = descarteRepository.save(descarte);
 		
+		int pontosGanhos = dto.getQuantidade();
+		usuario.setPontosVerdes(usuario.getPontosVerdes() + pontosGanhos);
+		usuarioRepository.save(usuario);
+		
 		return new DescarteDTO(descarte);
 
 	}

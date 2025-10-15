@@ -22,7 +22,7 @@ public class AuthController {
 	@Autowired
 	private UsuarioService service;
 	
-	   // ===== LOGIN =====
+	  
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginDTO loginDto, HttpSession session) {
         UsuarioDTO usuarioDto = service.autenticar(loginDto.getEmail(), loginDto.getSenha());
@@ -37,7 +37,7 @@ public class AuthController {
         }
     }
 
-    // ===== VERIFICAR USUÁRIO LOGADO =====
+
     @GetMapping("/usuario-logado")
     public ResponseEntity<?> getUsuarioLogado(HttpSession session) {
         Long usuarioId = (Long) session.getAttribute("usuarioId");
@@ -51,7 +51,7 @@ public class AuthController {
         }
     }
 
-    // ===== LOGOUT =====
+    
     @PostMapping("/logout")
     public ResponseEntity<?> logout(HttpSession session) {
         session.invalidate();
