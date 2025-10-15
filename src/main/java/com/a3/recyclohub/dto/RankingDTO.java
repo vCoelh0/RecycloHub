@@ -1,51 +1,31 @@
 package com.a3.recyclohub.dto;
 
-import com.a3.recyclohub.entites.Ranking;
-
 public class RankingDTO {
-private Long id;
-	
-	private Long idUsuario;
-	private int pontuacao;
-	private int posicao;
-	
-	
-	public RankingDTO(Long id, Long idUsuario, int pontuacao, int posicao) {
-		this.id = id;
-		this.idUsuario = idUsuario;
-		this.pontuacao = pontuacao;
-		this.posicao = posicao;
-	}
 
 	
-	public RankingDTO(Ranking entity) {
-		id = entity.getId();
-		idUsuario = entity.getIdUsuario();
-		pontuacao = entity.getPontuacao();
-		posicao = entity.getPosicao();
-
-	}
-
+	private String nomeUsuario;
+	private int pontosVerdes;
 	
 
-	public Long getId() {
-		return id;
+	public RankingDTO() {
+		
+	}
+	
+	public RankingDTO( String nomeUsuario, int pontosVerdes) {
+		this.nomeUsuario = nomeUsuario;
+		this.pontosVerdes = pontosVerdes;
+	}
+
+	public String getNomeUsuario() {
+		return nomeUsuario;
+	}
+
+	public int getPontosVerdes() {
+		return pontosVerdes;
 	}
 
 
-	public Long getIdUsuario() {
-		return idUsuario;
-	}
-
-
-	public int getPontuacao() {
-		return pontuacao;
-	}
-
-
-	public int getPosicao() {
-		return posicao;
-	}
+	
 	
 	
 	
