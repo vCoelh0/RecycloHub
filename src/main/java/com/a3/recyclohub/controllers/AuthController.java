@@ -22,32 +22,41 @@ public class AuthController {
 	@Autowired
 	private UsuarioService service;
 	
-	@PostMapping("/login")
-	public ResponseEntity<?> login(@RequestBody LoginDTO loginDto, HttpSession session){
-		UsuarioDTO usuarioDto = service.autenticar(loginDto.getEmail(), loginDto.getSenha());
-		
-		if(usuarioDto != null) {
-			session.setAttribute("Usuario Logado", usuarioDto);
-			return ResponseEntity.ok(usuarioDto);
-		} else {
-			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou senha invalidos");
-		}
-	}
-	
-	@GetMapping("/usuario-logado")
-	public ResponseEntity<?> getUsuarioLogado(HttpSession session){
-		UsuarioDTO usuarioDto = (UsuarioDTO) session.getAttribute("Usuario Logado");
-		if(usuarioDto != null) {
-			return ResponseEntity.ok(usuarioDto);
-		} else {
-			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Nenhum usuario logado");
-		}
-	}
-	
-	@PostMapping("/logout")
-	public ResponseEntity<?> logout (HttpSession session){
-		session.invalidate();
-		return ResponseEntity.ok("Sessão encerrada com sucesso");
-	}
-	
+	   // ===== LOGIN =====
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginDTO loginDto, HttpSession session) {
+        UsuarioDTO usuarioDto = service.autenticar(loginDto.getEmail(), loginDto.getSenha());
+
+        if (usuarioDto != null) {
+            // Armazena apenas o ID do usuário na sessão
+            session.setAttribute("usuarioId", usuarioDto.getId());
+            return ResponseEntity.ok(usuarioDto); // Retorna os dados do usuário logado
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Email ou senha inválidos.");
+        }
+    }
+
+    // ===== VERIFICAR USUÁRIO LOGADO =====
+    @GetMapping("/usuario-logado")
+    public ResponseEntity<?> getUsuarioLogado(HttpSession session) {
+        Long usuarioId = (Long) session.getAttribute("usuarioId");
+
+        if (usuarioId != null) {
+            UsuarioDTO usuarioDto = service.buscarPorId(usuarioId);
+            return ResponseEntity.ok(usuarioDto);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Nenhum usuário logado.");
+        }
+    }
+
+    // ===== LOGOUT =====
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout(HttpSession session) {
+        session.invalidate();
+        return ResponseEntity.ok("Sessão encerrada com sucesso.");
+    }
 }
+	
+

@@ -51,8 +51,18 @@ public class Descarte {
 	}
 
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
 	public Usuario getUsuario() {
 		return usuario;
+	}
+
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 
@@ -61,8 +71,18 @@ public class Descarte {
 	}
 
 
+	public void setPontoColeta(PontoColeta pontoColeta) {
+		this.pontoColeta = pontoColeta;
+	}
+
+
 	public String getTipoResiduo() {
 		return tipoResiduo;
+	}
+
+
+	public void setTipoResiduo(String tipoResiduo) {
+		this.tipoResiduo = tipoResiduo;
 	}
 
 
@@ -71,9 +91,24 @@ public class Descarte {
 	}
 
 
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+
 	public LocalDate getDataHora() {
 		return dataHora;
 	}
+
+
+	public void setDataHora(LocalDate dataHora) {
+		this.dataHora = dataHora;
+	}
+
+
+	
+
+
 	
 	
 	

@@ -44,5 +44,11 @@ public class UsuarioService {
 		
 	}
 	
+	public UsuarioDTO buscarPorId(Long id) {
+	    return repository.findById(id)
+	            .map(UsuarioDTO::new)
+	            .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+	}
+
 	
 }
