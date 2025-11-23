@@ -13,6 +13,7 @@ public class UsuarioDTO {
 	private String email; 
 	private LocalDate dataNascimento;
 	private String senha;
+	private String perfil;
 	
 	
 	
@@ -22,13 +23,14 @@ public class UsuarioDTO {
 		
 	}
 	
-	public UsuarioDTO(Long id, String nome, String sobrenome, String email, LocalDate dataNascimento, String senha) {
+	public UsuarioDTO(Long id, String nome, String sobrenome, String email, LocalDate dataNascimento, String senha, String perfil) {
 		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.email = email;
 		this.dataNascimento = dataNascimento;
 		this.senha = senha;
+		this.perfil = perfil;
 	}
 	
 	public UsuarioDTO(Usuario entity) {
@@ -37,7 +39,8 @@ public class UsuarioDTO {
 		sobrenome = entity.getSobrenome();
 		email = entity.getEmail();
 		dataNascimento = entity.getDataNascimento();
-		senha = entity.getSenha();			
+		senha = entity.getSenha();	
+		perfil = entity.getPerfil().name();
 	}
 	
 	
@@ -60,6 +63,11 @@ public class UsuarioDTO {
 	public String getSenha() {
 		return senha;
 	}
+
+	public String getPerfil() {
+		return perfil;
+	}
+	
 	
 	
 	
