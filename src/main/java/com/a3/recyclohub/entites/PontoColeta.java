@@ -16,7 +16,7 @@ public class PontoColeta {
 	
 	private String nome;
 	private String endereco;
-	private String tipoResiduo;
+	private int capacidadeTotal;
 	
 	// =============  CONSTRUTTORES, GETTERS E SETTERS =============
 	
@@ -24,11 +24,11 @@ public class PontoColeta {
 		
 	}
 
-	public PontoColeta(Long id, String nome, String endereco, String tipoResiduo) {
+	public PontoColeta(Long id, String nome, String endereco, int capacidadeTotal) {
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;
-		this.tipoResiduo = tipoResiduo;
+		this.capacidadeTotal = capacidadeTotal;
 	}
 
 	public Long getId() {
@@ -55,12 +55,12 @@ public class PontoColeta {
 		this.endereco = endereco;
 	}
 
-	public String getTipoResiduo() {
-		return tipoResiduo;
+	public int getCapacidadeTotal() {
+		return capacidadeTotal;
 	}
 
-	public void setTipoResiduo(String tipoResiduo) {
-		this.tipoResiduo = tipoResiduo;
+	public void setTipoResiduo(int capacidadeTotal) {
+		this.capacidadeTotal = capacidadeTotal;
 	}
 	
 	

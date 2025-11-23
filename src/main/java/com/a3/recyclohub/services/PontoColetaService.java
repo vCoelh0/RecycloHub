@@ -21,7 +21,7 @@ public class PontoColetaService {
 		
 		pcoleta.setNome(dto.getNome());
 		pcoleta.setEndereco(dto.getEndereco());
-		pcoleta.setTipoResiduo(dto.getTipoResiduo());
+		pcoleta.setTipoResiduo(dto.getCapacidadeTotal());
 
 		pcoleta = repository.save(pcoleta);
 	

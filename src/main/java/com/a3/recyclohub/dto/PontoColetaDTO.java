@@ -7,7 +7,7 @@ public class PontoColetaDTO {
 	private Long id;
 	private String nome;
 	private String endereco;
-	private String tipoResiduo;
+	private int capacidadeTotal;
 	
 	
 	// =============  CONSTRUTTORES, GETTERS E SETTERS =============
@@ -16,18 +16,18 @@ public class PontoColetaDTO {
 		
 	}
 	
-	public PontoColetaDTO(Long id, String nome, String endereco, String tipoResiduo) {
+	public PontoColetaDTO(Long id, String nome, String endereco, int capacidadeTotal) {
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;
-		this.tipoResiduo = tipoResiduo;
+		this.capacidadeTotal = capacidadeTotal;
 	}
 	
 	public PontoColetaDTO(PontoColeta entity) {
 		id = entity.getId();
 		nome = entity.getNome();
 		endereco = entity.getEndereco();
-		tipoResiduo = entity.getTipoResiduo();
+		capacidadeTotal = entity.getCapacidadeTotal();
 
 	}
 	
@@ -42,8 +42,8 @@ public class PontoColetaDTO {
 	public String getEndereco() {
 		return endereco;
 	}
-	public String getTipoResiduo() {
-		return tipoResiduo;
+	public int getCapacidadeTotal() {
+		return capacidadeTotal;
 	}
 	
 	

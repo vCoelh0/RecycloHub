@@ -10,8 +10,8 @@ INSERT INTO tb_usuario (nome, sobrenome, email, data_nascimento, senha, perfil, 
 -- ========================
 -- Pontos de coleta
 -- ========================
-INSERT INTO tb_pontocoleta (nome, endereco, tipo_residuo) VALUES ('Ponto Center Norte', 'Av. Otto Baumgart, 500 - Vila Guilherme', 'Fonte, Placa Mãe');
+INSERT INTO tb_pontocoleta (nome, endereco, capacidade_total) VALUES ('Ponto Center Norte', 'Av. Otto Baumgart, 500 - Vila Guilherme', '750');
 
-INSERT INTO tb_pontocoleta (nome, endereco, tipo_residuo) VALUES ('Ponto Escola Municipal Santos', 'Rua das Flores, 123 - Centro', 'Bateria, Celular');
+INSERT INTO tb_pontocoleta (nome, endereco, capacidade_total) VALUES ('Ponto Escola Municipal Santos', 'Rua das Flores, 123 - Centro', '530');
 
-INSERT INTO tb_pontocoleta (nome, endereco, tipo_residuo) VALUES ('Ponto Praça da Liberdade', 'Praça da Liberdade, s/n - Liberdade', 'Monitor, Controle');
+INSERT INTO tb_pontocoleta (nome, endereco, capacidade_total) VALUES ('Ponto Praça da Liberdade', 'Praça da Liberdade, s/n - Liberdade', '330');
