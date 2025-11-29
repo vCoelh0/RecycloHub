@@ -51,7 +51,7 @@ Listagem de pontos com busca e filtros
 Ranking público de descarte
 
 
-
+\n
 
 
 🛠 Administrador:
