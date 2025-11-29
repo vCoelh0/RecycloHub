@@ -38,7 +38,7 @@ H2 Database (Testes)
 
 
 # 🚀 Funcionalidades Implementadas
-👤 Usuário
+👤 Usuário:
 
 Cadastro
 
@@ -51,7 +51,10 @@ Listagem de pontos com busca e filtros
 Ranking público de descarte
 
 
-🛠 Administrador
+
+
+
+🛠 Administrador:
 
 Cadastro de pontos de coleta
 
@@ -62,6 +65,7 @@ Listagem dinâmica de pontos
 Painel administrativo com indicadores 
 
 Toasts personalizados para feedback
+
 
 
 Projeto desenvolvido em equipe.
